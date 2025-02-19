@@ -166,7 +166,7 @@ main {
 ***************** LEFT and RIGHT SECTION *****************
 */
 .rightA {
-    margin: 6em 0 1em 1em;
+    margin: 6em .5em 1em 0;
 }
 
 #home-title {
