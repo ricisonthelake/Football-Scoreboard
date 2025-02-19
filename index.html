@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The timer was built with the aid of a #dcode video: https://www.youtube.com/watch?v=PIiMSMz7KzM  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Scoreboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h2 id="welcome">Welcome to Scrimba Stadium</h2>
+        </div>
+    </main>
+    <div class="container">
+        <div class="leftDiv">
+            <div class="leftA">
+                <h3 id="home-title">Home</h3>
+                <div class="home-score">
+                    <h3 id="homePoints">0</h3>
+                </div>
+            </div>
+            <div class="leftB">
+                <div class="add-points-btn-home">
+                    <button class="plus-points" onclick="addOneToHome()">+1</button>
+                    <button class="plus-points" onclick="addTwoToHome()">+2</button>
+                    <button class="plus-points" onclick="addThreeToHome()">+3</button>
+                    <button class="plus-points" onclick="addSixToHome()">+6</button>
+                </div>
+            </div>
+            <div class="leftC"></div>
+            <div class="leftD"></div>
+        </div>
+        <div class="centerDiv">
+            <div class="timer">
+            </div>
+            <div class="info-items">
+                <div class="info">
+                    <h3 id="info-titles">TOL</h3>
+                    <div class="info-item">
+                        <h3 id="homeTol">3</h3>
+                    </div>
+                    <div class="add-points-btn-home">
+                        <button class="plus-points info-buttons" onclick="subtractOneFromHomeTol()">-1</button>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 id="info-titles">QTR</h3>
+                    <div class="info-item">
+                        <h3 id="quarter">1</h3>
+                    </div>
+                    <div class="add-points-btn-home">
+                        <button class="plus-points info-buttons" onclick="addOneToQuarter()">+1</button>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 id="info-titles">TOL</h3>
+                    <div class="info-item">
+                        <h3 id="guestTol">3</h3>
+                    </div>
+                    <div class="add-points-btn-home">
+                        <button class="plus-points info-buttons" onclick="subtractOneFromGuestTol()">-1</button>
+                    </div>
+                </div>
+            </div>
+            <div class="info-items">
+                <div class="info">
+                    <h3 id="info-titles">DOWN</h3>
+                    <div class="info-item down-item">
+                        <h3 id="down">1</h3>
+                    </div>
+                    <div class="down-btns">
+                        <button class="plus-points down-buttons" onclick="addOneToDown()">+1</button>
+                        <button class="plus-points down-buttons" onclick="subtractOnefromDown()">-1</button>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 id="info-titles">TO GO</h3>
+                    <div class="info-item togo-item">
+                        <h3 id="yardsToGo">10</h3>
+                    </div>
+                    <div class="down-btns">
+                        <button class="plus-points down-btns" onclick="addOneToYardsToGo()">+ 1</button>
+                        <button class="plus-points down-btns" onclick="subtractOneToYardsToGo()">- 1</button>
+                    </div>
+                    <div class="down-btns">
+                        <button class="plus-points down-btns" onclick="addTenToYardsToGo()">+10</button>
+                        <button class="plus-points down-btns" onclick="subtractTenToYardsToGo()">-10</button>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3 id="info-titles">ON</h3>
+                    <div class="info-item onYardItem">
+                        <h3 id="onYardLine">30</h3>
+                    </div>
+                    <div class="down-btns">
+                        <button class="plus-points down-btns" onclick="addOneToOnYardLine()">+ 1</button>
+                        <button class="plus-points down-btns" onclick="subtractOneToOnYardLine()">- 1</button>
+                    </div>
+                    <div class="down-btns">
+                        <button class="plus-points down-btns" onclick="addTenToOnYardLine()">+10</button>
+                        <button class="plus-points down-btns" onclick="subtractTenToOnYardLine()">-10</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightDiv">
+            <div class="rightA">
+                <h3 id="home-title">Guests</h3>
+                <div class="guest-score">
+                    <h3 id="guestPoints">0</h3>
+                </div>
+            </div>
+            <div class="rightB">
+                <div class="add-points-btn-home">
+                    <button class="plus-points" onclick="addOneToGuest()">+1</button>
+                    <button class="plus-points" onclick="addTwoToGuest()">+2</button>
+                    <button class="plus-points" onclick="addThreeToGuest()">+3</button>
+                    <button class="plus-points" onclick="addSixToGuest()">+6</button>
+                </div>
+            </div>
+            <div class="rightC"></div>
+            <div class="rightD"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

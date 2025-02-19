@@ -1,0 +1,384 @@
+:root {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 16px;
+}
+
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 2rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    /* font-families */
+    --ff-serif: "Times New Roman", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Verdana", sans-serif;
+}
+
+
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 
+***************** LAYOUT *****************
+*/
+
+body {
+    margin: 24px 30%;
+    text-align: center;
+    background: #ddd;
+    font-family: var(--ff-sans-normal);
+    color: BLACK;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 840px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    color: #EEEEEE;
+    background-color: hsl(147, 59%, 23%);
+    border: 5px solid hsl(147, 59%, 23%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main {
+    display: flex;
+    width: 840px;
+    margin: 0 auto;
+    justify-content: center;
+    color: white;
+    font-size: var(--fs-500);
+    background-color: hsl(147, 59%, 23%);
+    border: 5px solid hsl(147, 59%, 23%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#welcome {
+    margin-top: 25px;
+}
+
+.leftDiv,
+.rightDiv,
+.centerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+    height: 500px;
+}
+
+.leftA,
+.rightA {
+    width: auto;
+    height: auto;
+    margin: 6em auto 1em;
+}
+
+.leftB,
+.rightB {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+}
+
+.leftC {
+    margin: 4em 0;
+}
+
+/* 
+***************** LEFT and RIGHT SECTION *****************
+*/
+.rightA {
+    margin: 6em 0 1em 1em;
+}
+
+#home-title {
+    text-align: center;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-700);
+}
+
+#info-titles {
+    padding-bottom: 5px;
+}
+
+.home-score,
+.guest-score,
+.timer__parts,
+.info-item {
+    border: 3px solid yellow;
+}
+
+
+
+.home-score,
+.guest-score {
+    width: 5em;
+    height: 5em;
+    top: 0;
+    left: 0;
+    margin: 0 1em;
+    font-family: "Cursed Timer ULiL", sans-serif;
+    background-color: #080001;
+    border-radius: 5px;
+}
+
+#homePoints,
+#guestPoints {
+    font-size: var(--fs-800);
+    color: #F94F6D;
+}
+
+.add-points-btn-home {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.down-btns {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-top: 5px;
+}
+
+.plus-points {
+    margin: 0 2px;
+    background: #1B244A;
+    border: 2px solid #9AABD8;
+    border-radius: 5px;
+    color: #9AABD8;
+    font-family: "Cursed Timer ULiL", sans-serif;
+}
+
+/* #currentQuarter {
+    font-size: var(--fs-600);
+        color: #F94F6D;} */
+
+/* 
+***************** CENTER SECTION *****************
+*/
+
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 600px;
+    margin: 0 auto 0;
+    background: hsl(147, 59%, 23%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 0;
+}
+
+.timer__parts {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    margin: 25px 25px .255em;
+    padding: 2px .65em 0;
+    background-color: #080001;
+    border-radius: 5px;
+    font-family: "Cursed Timer ULiL", sans-serif;
+    font-size: 36px;
+    color: #F94F6D;
+}
+
+
+.timer__btns {
+    width: 150px;
+    margin: 0 0 10px;
+}
+
+.timer__btn {
+    background: #1b244a;
+    border: 2px solid #9AABD8;
+    padding: 4px 4px 1px;
+    border-radius: 10px;
+}
+
+.timer__btn--start {
+    color: rgb(44, 220, 9)
+}
+
+.timer__btn--stop {
+    color: red;
+}
+
+.timer__btn--reset {
+    color: yellow
+}
+
+.info-items {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+
+}
+
+.info {
+    margin: 0 .5em;
+}
+
+#info-titles {
+    font-size: var(--fs-300);
+    padding-bottom: 5px;
+}
+
+.info-item {
+    width: 3.5em;
+    height: 3em;
+    margin: .125em;
+    text-align: center;
+    font-family: "Cursed Timer ULiL", sans-serif;
+    background-color: #080001;
+    border-radius: 5px;
+}
+
+.togo-item,
+.onYardItem {
+    margin-left: 20px;
+}
+
+.yards-item,
+.down-item {
+    margin-left: 10px;
+}
+
+#homeTol,
+#guestTol,
+#quarter,
+#down,
+#yardsToGo,
+#onYardLine {
+    width: 3rem;
+    height: 3rem;
+    padding: 5px;
+    font-size: var(--fs-600);
+    color: #F94F6D;
+}
+
+.info-buttons {
+    margin-left: 12px;
+}
+
+.down-buttons {
+    margin-left: 0px;
+}
+
+.leftC {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 
+***************** RIGHT SECTION *****************
+*/
+
+
+
+
+/* .leftC {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: rgb(4, 69, 69);
+    border: 3px solid black;
+}
+
+.leftD {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: rgb(4, 69, 69);
+    border: 3px solid black;
+} */
